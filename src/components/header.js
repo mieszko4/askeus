@@ -55,9 +55,6 @@ export default class Header extends PureComponent {
               <Link className="navbar-item" to="/typescript-counter" onClick={() => this.closeMenuBar()}>
                 TypeScript Counter
               </Link>
-              <Link className="navbar-item" to="/image-optimization" onClick={() => this.closeMenuBar()}>
-                Image Optimization
-              </Link>
             </div>
           </div>
         </nav>
