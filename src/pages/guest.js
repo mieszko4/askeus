@@ -2,12 +2,12 @@ import CSSGlobalLocalImage from '../resources/img/seo/css-global-local.png';
 
 export default [
   {
-    path: '/typescript-counter',
+    path: '/chat',
     exact: true,
-    component: () => import('../components/typescript-counter'),
+    component: () => import('../components/chat'),
     seo: {
-      title: 'TypeScript Counter | ReactPWA Demo',
-      description: 'TypeScript is awesome and implementing it with React makes it more awesome. Checkout this simple counter example with react and typescript',
+      title: 'Chat | AskEUs',
+      description: 'Ask anything regarding European Union - protect yourself from fake news',
       image: CSSGlobalLocalImage,
     },
   },

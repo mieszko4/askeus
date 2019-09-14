@@ -49,8 +49,8 @@ export default class Header extends PureComponent {
               </button>
             </div>
             <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
-              <Link className="navbar-item" to="/typescript-counter" onClick={() => this.closeMenuBar()}>
-                TypeScript Counter
+              <Link className="navbar-item" to="/chat" onClick={() => this.closeMenuBar()}>
+                Chat
               </Link>
             </div>
           </div>
