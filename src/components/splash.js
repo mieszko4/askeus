@@ -6,12 +6,12 @@ export default () => (
     <div className="hero-body">
       <div className="container">
         <h1 className="title">
-            Welcome to ReactPWA
+          Welcome to AskEUs
         </h1>
         <h2 className="subtitle">
-            An extendable boilerplate built on top of PawJS, for developers
+          A friendly chatbot for getting the valid source of information about European Union
         </h2>
-        <Link to="/home" className="button">Checkout the full demo</Link>
+        <Link to="/chat" className="button">Ask now!</Link>
       </div>
     </div>
   </section>
