@@ -26,9 +26,9 @@ export default class Routes {
       ],
 
       orientation: 'any',
-      start_url: '/',
+      start_url: '/?utm_source=pwa',
       background_color: '#003399',
-      theme_color: '#ffcc00',
+      theme_color: '#003399',
       display: 'standalone',
     });
     routeHandler.setDefaultSeoSchema({
