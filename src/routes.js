@@ -1,5 +1,4 @@
 import GuestRoutes from './pages/guest';
-import AuthRoutes from './pages/auth';
 import SplashScreen from './pages/splash';
 
 export default class Routes {
@@ -15,7 +14,6 @@ export default class Routes {
 
     const routes = [
       ...GuestRoutes,
-      ...AuthRoutes,
       ...SplashScreen,
     ];
 
