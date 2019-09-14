@@ -5,7 +5,7 @@
     { "src": "dist/server.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/static/manifest.json", "dest": "dist/server.js" },
+    { "src": "/static/chat|/static/manifest.json", "dest": "dist/server.js" },
     { "src": "/static/(.*)", "dest": "dist/build/$1" },
     { "src": "/.*", "dest": "dist/server.js" }
   ]
