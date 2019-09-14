@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GuestLayout from './guest-layout';
+import GuestLayout from '../guest-layout';
 
 export default function () {
   return (
