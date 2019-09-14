@@ -1,9 +1,9 @@
 {
   "builds": [
-    { "src": "dist/build/*", "use": "@now/static" },
+    { "src": "dist/build/**", "use": "@now/static" },
     { "src": "dist/server.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/.*", "dest": "dist/server.js" }
+    { "src": "!(build)", "dest": "dist/server.js" }
   ]
 }

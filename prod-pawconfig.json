@@ -1,5 +1,5 @@
 {
-  "appRootUrl": "/",
+  "appRootUrl": "/build/",
   "asyncCSS": true,
   "host": "0.0.0.0",
   "polyfill": "cdn",
