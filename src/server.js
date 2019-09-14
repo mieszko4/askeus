@@ -6,8 +6,10 @@ export default class Server {
   apply(serverHandler) {
     serverHandler.hooks.beforeHtmlRender.tapPromise('DSNPreCache', async (Application) => {
       const { htmlProps: { head } } = Application;
-      head.push(<link key="dns-precache-google-analytics" rel="preconnect" href="https://www.google-analytics.com" />);
-      head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
+      /* Google tracker disabled
+        head.push(<link key="dns-precache-google-analytics" rel="preconnect" href="https://www.google-analytics.com" />);
+        head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
+      */
       head.push(<meta key="meta-theme-color" name="theme-color" content="#209cee" />);
       //
     });
@@ -18,6 +20,7 @@ export default class Server {
       return true;
     });
 
+    /* Google tracker disabled
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddGoogleTracking', async (Application) => {
       Application.htmlProps.footer.push(<script async key="googleanalyticslink" src="https://www.googletagmanager.com/gtag/js?id=UA-108804791-2" />);
       Application.htmlProps.footer.push(<script
@@ -31,5 +34,6 @@ export default class Server {
         }}
       />);
     });
+    */
   }
 }
