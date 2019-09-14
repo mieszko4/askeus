@@ -1,7 +1,4 @@
-import fetch from 'universal-fetch';
-import skeleton from '../components/skeleton';
 import CSSGlobalLocalImage from '../resources/img/seo/css-global-local.png';
-import SkeletonImage from '../resources/img/seo/skeleton-loading.png';
 import ImageOptimizationImage from '../resources/img/seo/image-optimization.png';
 
 export default [
@@ -23,24 +20,6 @@ export default [
       title: 'TypeScript Counter | ReactPWA Demo',
       description: 'TypeScript is awesome and implementing it with React makes it more awesome. Checkout this simple counter example with react and typescript',
       image: CSSGlobalLocalImage,
-    },
-  },
-  {
-    path: '/skeleton-loading',
-    exact: true,
-    loadData: async () => new Promise((r) => {
-      setTimeout(() => {
-        fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
-          .then(res => res.json())
-          .then(res => r(res));
-      }, 1000);
-    }),
-    component: () => import('../components/skeleton-loading'),
-    skeleton,
-    seo: {
-      title: 'Skeleton Loading | ReactPWA Demo',
-      description: 'Tired of adding ugly loaders? Do not let your users get confused, give them the best user experience of what is getting loaded. Use Skeleton Loading',
-      image: SkeletonImage,
     },
   },
   {
