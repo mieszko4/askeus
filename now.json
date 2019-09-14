@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     { "src": "dist/build/**", "use": "@now/static" },
     { "src": "dist/server.js", "use": "@now/node" }

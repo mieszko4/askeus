@@ -17,12 +17,10 @@ export default class Routes {
       icons: [
         {
           src: AskeusSmallIcon,
-          type: 'image/png',
           sizes: '192x192',
         },
         {
           src: AskeusIcon,
-          type: 'image/png',
           sizes: '512x512',
         },
       ],
