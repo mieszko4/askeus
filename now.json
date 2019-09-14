@@ -2,11 +2,13 @@
   "version": 2,
   "builds": [
     { "src": "dist/build/**", "use": "@now/static" },
-    { "src": "dist/server.js", "use": "@now/node" }
+    { "src": "dist/server.js", "use": "@now/node" },
+    { "src": "backend/src/ask.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/static/chat|/static/manifest.json", "dest": "dist/server.js" },
     { "src": "/static/(.*)", "dest": "dist/build/$1" },
+    { "src": "/api/ask(.*)", "dest": "backend/src/ask.js" },
     { "src": "/.*", "dest": "dist/server.js" }
   ]
 }
