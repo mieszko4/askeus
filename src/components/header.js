@@ -70,13 +70,6 @@ export default class Header extends PureComponent {
               <Link className="navbar-item" to="/contribute" onClick={() => this.closeMenuBar()}>
                 Contribute
               </Link>
-              <a
-                className="navbar-item has-text-danger"
-                href="https://www.reactpwa.com"
-                onClick={() => this.closeMenuBar()}
-              >
-                Visit ReactPWA.com
-              </a>
             </div>
           </div>
         </nav>
