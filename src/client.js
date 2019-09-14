@@ -4,6 +4,7 @@ import './resources/css/util.scss';
 import './resources/css/global.css';
 
 export default class Client {
+  /*
   static googleTrack() {
     if (typeof window.gtag === 'function') {
       window.gtag('config', 'UA-108804791-2', {
@@ -12,8 +13,9 @@ export default class Client {
     }
   }
 
-  /* eslint-disable-next-line class-methods-use-this */
   apply(clientHandler) {
-    clientHandler.hooks.locationChange.tapPromise('ReloadGoogleTrack', async () => Client.googleTrack());
+    clientHandler.hooks.locationChange.tapPromise('ReloadGoogleTrack',
+    async () => Client.googleTrack());
   }
+  */
 }
