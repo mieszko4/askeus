@@ -10,7 +10,7 @@ export default class Server {
         head.push(<link key="dns-precache-google-analytics" rel="preconnect" href="https://www.google-analytics.com" />);
         head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
       */
-      head.push(<meta key="meta-theme-color" name="theme-color" content="#209cee" />);
+      head.push(<meta key="meta-theme-color" name="theme-color" content="#003399" />);
       //
     });
 
