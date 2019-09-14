@@ -1,5 +1,5 @@
 {
-  "appRootUrl": "/dist/build/",
+  "appRootUrl": "/static/",
   "asyncCSS": true,
   "host": "0.0.0.0",
   "polyfill": "cdn",

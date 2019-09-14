@@ -9,7 +9,7 @@
     "test": "pawjs --no-cache test"
   },
   "engines": {
-    "npm" : "~1.0.20"
+    "npm": "~1.0.20"
   },
   "author": {
     "name": "AskEUs Team"
