@@ -6,7 +6,7 @@ export default () => (
     <div className="hero-body">
       <div className="container">
         <h1 className="title">
-          Welcome to Ask EU
+          Welcome to AskEUs
         </h1>
         <h2 className="subtitle">
           A friendly chatbot for getting the valid source of information about European Union
