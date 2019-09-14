@@ -27,6 +27,7 @@ export default class Routes {
 
       orientation: 'any',
       start_url: '/?utm_source=pwa',
+      scope: '/',
       background_color: '#003399',
       theme_color: '#003399',
       display: 'standalone',
