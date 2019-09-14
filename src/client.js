@@ -12,6 +12,7 @@ export default class Client {
     }
   }
 
+  /* eslint-disable-next-line class-methods-use-this */
   apply(clientHandler) {
     clientHandler.hooks.locationChange.tapPromise('ReloadGoogleTrack', async () => Client.googleTrack());
   }
