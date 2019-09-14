@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPWAIcon from './resources/img/react-pwa.png';
+import AskeusIcon from './resources/img/askeus.png';
 
 export default class Server {
   // eslint-disable-next-line
@@ -16,7 +16,7 @@ export default class Server {
 
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddFavIcon', async (Application) => {
       const { htmlProps: { head } } = Application;
-      head.push(<link key="favicon" rel="shortcut icon" type="image/png" href={ReactPWAIcon} />);
+      head.push(<link key="favicon" rel="shortcut icon" type="image/png" href={AskeusIcon} />);
       return true;
     });
 

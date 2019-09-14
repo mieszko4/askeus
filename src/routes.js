@@ -5,11 +5,11 @@ export default class Routes {
   // eslint-disable-next-line
   apply(routeHandler) {
     routeHandler.setPwaSchema({
-      name: 'ReactPWA',
-      short_name: 'ReactPWA',
+      name: 'AskEUs',
+      short_name: 'AskEUs',
     });
     routeHandler.setDefaultSeoSchema({
-      title: 'ReactPWA',
+      title: 'AskEUs',
     });
 
     const routes = [
