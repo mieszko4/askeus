@@ -1,4 +1,4 @@
-import CSSGlobalLocalImage from '../resources/img/seo/css-global-local.png';
+import ChatImage from '../resources/img/seo/chat.png';
 
 export default [
   {
@@ -8,7 +8,7 @@ export default [
     seo: {
       title: 'Chat | AskEUs',
       description: 'Ask anything regarding European Union - protect yourself from fake news',
-      image: CSSGlobalLocalImage,
+      image: ChatImage,
     },
   },
 ];
