@@ -1,7 +1,7 @@
 {
-  "name": "react-pwa",
-  "version": "2.2.6-alpha.0",
-  "description": "A highly scalable, Progressive Web Application foundation with the best Developer Experience (DX).",
+  "name": "askeus",
+  "version": "0.0.0",
+  "description": "Ask EU Chatbot",
   "scripts": {
     "start": "pawjs --no-cache --env=development start",
     "build": "pawjs --no-cache --config=./prod-pawconfig.json --env=production build",
@@ -10,25 +10,20 @@
     "test": "pawjs --no-cache test"
   },
   "author": {
-    "name": "Atyantik Technologies",
-    "email": "admin@atyantik.com",
-    "url": "https://www.atyantik.com/"
+    "name": "AskEUs Team"
   },
   "contributors": [
     {
-      "name": "Tirth Bodawala",
-      "email": "tirthbodawala@atyantik.com",
-      "url": "https://www.atyantik.com/"
+      "name": "gljivar",
+      "url": "https://github.com/gljivar"
     },
     {
-      "name": "Yash Thakur",
-      "email": "thakur.yash514@gmail.com",
-      "url": "http://yashthakur.in/"
+      "name": "donremo",
+      "url": "https://github.com/donremo"
     },
     {
-      "name": "Ajay Patel",
-      "email": "ajaypatel@atyantik.com",
-      "url": "https://www.atyantik.com/"
+      "name": "mieszko4",
+      "url": "https://github.com/mieszko4"
     }
   ],
   "license": "MIT",
