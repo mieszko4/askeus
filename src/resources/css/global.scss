@@ -1,0 +1,32 @@
+$info: #003399;
+$info-invert: #ffcc00;
+
+@import "../../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../../node_modules/bulma/sass/base/_all.sass";
+@import "../../../node_modules/bulma/sass/elements/button.sass";
+@import "../../../node_modules/bulma/sass/elements/container.sass";
+@import "../../../node_modules/bulma/sass/elements/title.sass";
+@import "../../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../../node_modules/bulma/sass/layout/section.sass";
+
+
+@keyframes blink {
+  0% { opacity: 0.7; }
+  40% { opacity: 0.9; }
+  50% { opacity: 1; }
+  60% { opacity: 0.9; }
+  100% { opacity: 0.7; }
+}
+.skeleton-blink {
+  animation: blink 1s infinite;
+}
+.skeleton-blink article {
+  min-height: 200px;
+}
+.skeleton-blink article.header, .skeleton-blink article.footer {
+  min-height: 70px;
+}
+footer.footer a {
+  color: #17386d !important;
+}
