@@ -31,7 +31,7 @@ async function ask(requestQuestion){
             }
         });
 
-    return answer;
+    return answer.json();
 }
 
 module.exports = {

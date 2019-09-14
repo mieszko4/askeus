@@ -24,6 +24,7 @@ jobs:
     - name: Deploy
       run: |
         npm ci
+        cd ./backend && npm ci && cd ..
         npm run build --if-present
         npm test
         npx now --token $NOW_TOKEN
