@@ -16,10 +16,12 @@ export default () => (
         {' '}
         <a href="https://github.com/mieszko4">mieszko4</a>
         {' '}
-        Visit the site&quot;s Github Repo
-        {' '}
-        <a href="https://github.com/mieszko4/askeus">https://github.com/mieszko4/askeus</a>
-        .
+
+        <div>
+          Visit the site&quot;s Github Repo
+          {' '}
+          <a href="https://github.com/mieszko4/askeus">https://github.com/mieszko4/askeus</a>
+        </div>
       </p>
     </div>
   </footer>
