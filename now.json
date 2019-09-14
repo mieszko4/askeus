@@ -4,6 +4,6 @@
     { "src": "dist/server.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "!(build)", "dest": "dist/server.js" }
+    { "src": "/!(build)", "dest": "dist/server.js" }
   ]
 }
