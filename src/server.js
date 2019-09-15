@@ -1,6 +1,6 @@
 import React from 'react';
 import AskeusIcon from './resources/img/askeus.png';
-import AskeusIosTouchIcon from './resources/img/askeus-small.png';
+import AskeusIosTouchIcon from './resources/img/askeus-ios-touch.png';
 
 export default class Server {
   // eslint-disable-next-line
