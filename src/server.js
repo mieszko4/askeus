@@ -17,18 +17,6 @@ export default class Server {
       return true;
     });
 
-    serverHandler.hooks.beforeHtmlRender.tapPromise('AddServiceWoker', async (Application) => {
-      Application.htmlProps.footer.push(<script
-        key="serviceWorker"
-        // eslint-disable-next-line
-        dangerouslySetInnerHTML={{
-          __html: `if('serviceWorker' in navigator) {
-              navigator.serviceWorker.register('/static/sw.js');
-            }`,
-        }}
-      />);
-    });
-
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddGoogleTracking', async (Application) => {
       Application.htmlProps.footer.push(<script async key="googleanalyticslink" src="https://www.googletagmanager.com/gtag/js?id=UA-148057726-1" />);
       Application.htmlProps.footer.push(<script

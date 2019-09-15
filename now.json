@@ -6,8 +6,7 @@
     { "src": "backend/src/ask.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/static/chat|/static/manifest.json", "dest": "dist/server.js" },
-    { "src": "/static/(.*)", "dest": "dist/build/$1" },
+    { "src": "/(css|js|images|sw\\.js|precache-manifest\\.)(.*)", "dest": "dist/build/$1$2" },
     { "src": "/api/ask(.*)", "dest": "backend/src/ask.js" },
     { "src": "/.*", "dest": "dist/server.js" }
   ]
