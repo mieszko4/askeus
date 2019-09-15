@@ -4,6 +4,8 @@ import { Widget, addResponseMessage } from 'react-chat-widget';
 
 import 'react-chat-widget/lib/styles.css';
 
+import styles from './styles.scss';
+
 function handleNewUserMessage(newMessage) {
   console.log(`New message incoming! ${newMessage}`);
   
@@ -38,7 +40,13 @@ export default function () {
   return (
     <GuestLayout>
       <div className="container p-b-md p-r-md p-l-md has-text-centered">
+        <h1>
+          Chat with me
+        </h1>
         <hr />
+        <p className={styles.info}>
+          To start, press on the bottom right icon!
+        </p>
         <div className="App">
           <Widget
             handleNewUserMessage={handleNewUserMessage}
@@ -46,6 +54,7 @@ export default function () {
             subtitle="For now I can answer about your rights on brexit or obtaining residence in Poland."
           />
         </div>
+        <hr />
       </div>
     </GuestLayout>
   );
