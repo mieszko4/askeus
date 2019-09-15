@@ -91,14 +91,14 @@ export default function () {
         <p className={styles.info}>
           To start, press on the bottom right icon!
         </p>
-        <p>
+        <p className="microphone">
           {speechRecognition && !listening && (
             <button
               type="button"
               className="button"
               onClick={handleVoiceRecognition}
             >
-              After pressing on this you can say your question instead of typing it
+              🎤🎤🎤 Press and ask 🎤🎤🎤
             </button>
           )}
           {listening && (
