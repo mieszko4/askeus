@@ -47,7 +47,7 @@ export default function () {
         <p className={styles.info}>
           To start, press on the bottom right icon!
         </p>
-        <div className="App">
+        <div className="chat">
           <Widget
             handleNewUserMessage={handleNewUserMessage}
             title="Chat to EU Demo"

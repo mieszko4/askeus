@@ -32,7 +32,7 @@ footer.footer a {
 }
 
 // react-chat-widget
-.App {
+.chat {
   .rcw-conversation-container .rcw-header {
     background-color: $info;
     color: $info-invert;
@@ -40,5 +40,13 @@ footer.footer a {
   }
   .rcw-launcher {
     background-color: $info;
+  }
+
+  .rcw-response {
+    background-color: $info;
+    color: $info-invert;
+  }
+  .rcw-client {
+    background-color: #f4f7f9;
   }
 }
