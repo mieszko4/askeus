@@ -79,7 +79,8 @@ export default function () {
       addUserMessage(transcript);
       handleNewUserMessage(transcript);
 
-      if (window.innerWidth <= 800) {
+      const chatContainer = document.getElementsByClassName('rcw-widget-container');
+      if (chatContainer && !chatContainer[0].classList.contains('rcw-opened')) {
         toggleWidget();
       }
     };
