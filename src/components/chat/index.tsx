@@ -15,7 +15,15 @@ function handleNewUserMessage(newMessage) {
         (result) => {
           console.log(result);
           console.log(result.answers);
-          addResponseMessage(result.answers[0].answer);
+
+          if (!result.answers[0].source) {
+            return addResponseMessage('I am sorry, could you please rephrase that?');
+          }
+          const source = result.answers[0].source.startsWith('http')
+            ? `\n\nSee more about this topic at [${result.answers[0].source}](${result.answers[0].source}).`
+            : '';
+
+          addResponseMessage(`${result.answers[0].answer}${source}`);
           // this.setState({
           //   isLoaded: true,
           //   items: result.items
@@ -32,8 +40,6 @@ function handleNewUserMessage(newMessage) {
           // });
         }
       );
-
-  
 }
 
 export default function () {

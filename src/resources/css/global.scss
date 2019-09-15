@@ -45,8 +45,16 @@ footer.footer a {
   .rcw-response {
     background-color: $info;
     color: $info-invert;
+
+    a {
+      color: white;
+    }
   }
   .rcw-client {
     background-color: #f4f7f9;
+  }
+
+  .rcw-message-text p {
+    margin: 10px 0;
   }
 }
