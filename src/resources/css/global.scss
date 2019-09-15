@@ -33,10 +33,18 @@ footer.footer a {
 
 // react-chat-widget
 .chat {
-  .rcw-conversation-container .rcw-header {
-    background-color: $info;
-    color: $info-invert;
-    padding: 20px 30px;
+  .rcw-widget-container.rcw-opened {
+    z-index: 999;
+  }
+  .rcw-conversation-container {
+    .rcw-header {
+      background-color: $info;
+      color: $info-invert;
+      padding: 20px 30px;
+    }
+    .rcw-close-button {
+      background-color: $info;
+    }
   }
   .rcw-launcher {
     background-color: $info;
@@ -60,5 +68,5 @@ footer.footer a {
 }
 
 .microphone .button {
-  font-size: 50px;
+  font-size: 20px;
 }

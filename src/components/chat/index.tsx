@@ -78,6 +78,10 @@ export default function () {
       const { transcript } = event.results[0][0];
       addUserMessage(transcript);
       handleNewUserMessage(transcript);
+
+      if (window.innerWidth <= 800) {
+        toggleWidget();
+      }
     };
   };
 
