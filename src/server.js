@@ -1,6 +1,6 @@
 import React from 'react';
 import AskeusIcon from './resources/img/askeus.png';
-import AskeusSmallIcon from './resources/img/askeus-small.png';
+import AskeusIosTouchIcon from './resources/img/askeus-small.png';
 
 export default class Server {
   // eslint-disable-next-line
@@ -15,7 +15,7 @@ export default class Server {
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddFavIcon', async (Application) => {
       const { htmlProps: { head } } = Application;
       head.push(<link key="favicon" rel="shortcut icon" type="image/png" href={AskeusIcon} />);
-      head.push(<link key="apple-touch-icon" rel="apple-touch-icon" type="image/png" href={AskeusSmallIcon} />);
+      head.push(<link key="apple-touch-icon" rel="apple-touch-icon" type="image/png" href={AskeusIosTouchIcon} />);
       return true;
     });
 
