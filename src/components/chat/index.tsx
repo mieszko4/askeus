@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import GuestLayout from '../guest-layout';
-import { Widget, addResponseMessage } from 'react-chat-widget';
+import { Widget, addResponseMessage, addUserMessage, toggleWidget } from 'react-chat-widget';
 
 import 'react-chat-widget/lib/styles.css';
 
 import styles from './styles.scss';
+import { list } from 'postcss';
 
 function handleNewUserMessage(newMessage) {
   console.log(`New message incoming! ${newMessage}`);
@@ -42,7 +43,44 @@ function handleNewUserMessage(newMessage) {
       );
 }
 
+const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+if (speechRecognition) {
+  const recognition = new speechRecognition();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 5;
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    console.log('You said: ', event.results[0][0].transcript);
+  };
+}
+
+
 export default function () {
+  useEffect(() => {
+    toggleWidget();
+  }, []);
+
+  const [listening, setListening] = useState(false);
+
+
+  const handleVoiceRecognition = () => {
+    const recognition = new speechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 5;
+    recognition.start();
+  
+    setListening(true);
+    recognition.onresult = function(event) {
+      setListening(false);
+      const { transcript } = event.results[0][0];
+      addUserMessage(transcript);
+      handleNewUserMessage(transcript);
+    };
+  };
+
   return (
     <GuestLayout>
       <div className="container p-b-md p-r-md p-l-md has-text-centered">
@@ -52,6 +90,20 @@ export default function () {
         <hr />
         <p className={styles.info}>
           To start, press on the bottom right icon!
+        </p>
+        <p>
+          {speechRecognition && !listening && (
+            <button
+              type="button"
+              className="button"
+              onClick={handleVoiceRecognition}
+            >
+              After pressing on this you can say your question instead of typing it
+            </button>
+          )}
+          {listening && (
+            <span>I am listening....</span>
+          )}
         </p>
         <div className="chat">
           <Widget
