@@ -75,6 +75,12 @@ export default function () {
     setListening(true);
     recognition.onresult = function(event) {
       setListening(false);
+
+      if ((event.results || []).length === 0) {
+        alert('I am sorry, I could not transcript');
+        return;
+      }
+
       const { transcript } = event.results[0][0];
       addUserMessage(transcript);
       handleNewUserMessage(transcript);
