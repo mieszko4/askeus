@@ -6,12 +6,9 @@ export default class Server {
   apply(serverHandler) {
     serverHandler.hooks.beforeHtmlRender.tapPromise('DSNPreCache', async (Application) => {
       const { htmlProps: { head } } = Application;
-      /* Google tracker disabled
-        head.push(<link key="dns-precache-google-analytics" rel="preconnect" href="https://www.google-analytics.com" />);
-        head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
-      */
+      head.push(<link key="dns-precache-google-analytics" rel="preconnect" href="https://www.google-analytics.com" />);
+      head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
       head.push(<meta key="meta-theme-color" name="theme-color" content="#003399" />);
-      //
     });
 
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddFavIcon', async (Application) => {
@@ -32,9 +29,8 @@ export default class Server {
       />);
     });
 
-    /* Google tracker disabled
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddGoogleTracking', async (Application) => {
-      Application.htmlProps.footer.push(<script async key="googleanalyticslink" src="https://www.googletagmanager.com/gtag/js?id=UA-108804791-2" />);
+      Application.htmlProps.footer.push(<script async key="googleanalyticslink" src="https://www.googletagmanager.com/gtag/js?id=UA-148057726-1" />);
       Application.htmlProps.footer.push(<script
         key="googleanalyticsscript"
         // eslint-disable-next-line
@@ -42,10 +38,9 @@ export default class Server {
           __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-108804791-2');`,
+            gtag('config', 'UA-148057726-1');`,
         }}
       />);
     });
-    */
   }
 }
