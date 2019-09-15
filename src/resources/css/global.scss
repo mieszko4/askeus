@@ -30,3 +30,14 @@ $info-invert: #ffcc00;
 footer.footer a {
   color: #17386d !important;
 }
+
+// react-chat-widget
+.App {
+  .rcw-conversation-container .rcw-header {
+    background-color: $info;
+    color: $info-invert;
+  }
+  .rcw-launcher {
+    background-color: $info;
+  }
+}

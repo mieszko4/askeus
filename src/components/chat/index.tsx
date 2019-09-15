@@ -1,14 +1,10 @@
 import * as React from 'react';
-import style from './style.scss';
 import GuestLayout from '../guest-layout';
 import { Widget, addResponseMessage } from 'react-chat-widget';
 
 import 'react-chat-widget/lib/styles.css';
 
-export function componentDidMount() {
-  //addResponseMessage("Welcome to this awesome chat!");
-}
-export function handleNewUserMessage(newMessage) {
+function handleNewUserMessage(newMessage) {
   console.log(`New message incoming! ${newMessage}`);
   
   fetch(`/api/ask?question=${newMessage}`)
